@@ -1,7 +1,14 @@
 import { useContext } from "react";
-import NavigationContext from "../context/navigation";
+import NavigationContext, {
+  NavigationContextModel
+} from "../context/navigation";
 
-const useNavigation = () => {
+/**
+ * Custom hook for accessing the NavigationContext.
+ * @returns {NavigationContextModel} - The NavigationContext object.
+ */
+
+const useNavigation = (): NavigationContextModel => {
   return useContext(NavigationContext);
 };
 

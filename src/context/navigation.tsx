@@ -1,12 +1,12 @@
 import React, { createContext, useEffect, useState } from "react";
 
-type NavigationContextType = {
+export type NavigationContextModel = {
   currentPath: string;
   navigate: (to: string) => void;
 };
 
-const NavigationContext: React.Context<NavigationContextType> =
-  createContext<NavigationContextType>({} as NavigationContextType);
+const NavigationContext: React.Context<NavigationContextModel> =
+  createContext<NavigationContextModel>({} as NavigationContextModel);
 
 /**
  * Provides the NavigationContext to its children.
