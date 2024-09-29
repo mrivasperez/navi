@@ -1,5 +1,4 @@
 import React, { PropsWithChildren } from "react";
-import classNames from "classnames";
 import useNavigation from "../hooks/useNavigation";
 
 interface LinkProps extends React.HTMLAttributes<HTMLAnchorElement> {
@@ -9,8 +8,6 @@ interface LinkProps extends React.HTMLAttributes<HTMLAnchorElement> {
 
 const Link = ({ to, children, className }: PropsWithChildren<LinkProps>) => {
   const { navigate } = useNavigation();
-
-  const linkClassNames = classNames("text-blue-600", className);
 
   const handleClick = (
     event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
@@ -23,7 +20,7 @@ const Link = ({ to, children, className }: PropsWithChildren<LinkProps>) => {
   };
 
   return (
-    <a onClick={handleClick} href={to} className={linkClassNames}>
+    <a onClick={handleClick} href={to} className={className}>
       {children}
     </a>
   );
