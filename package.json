@@ -17,6 +17,10 @@
     "build": "tsc && rollup -c",
     "dev": "rollup -c -w"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrivasperez/navi.git"
+  },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^28.0.0",
     "@rollup/plugin-node-resolve": "^15.3.0",
