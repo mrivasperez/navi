@@ -5,13 +5,24 @@ type NavigationContextType = {
   navigate: (to: string) => void;
 };
 
-const NavigationContext = createContext<NavigationContextType>(
-  {} as NavigationContextType
-);
+const NavigationContext: React.Context<NavigationContextType> =
+  createContext<NavigationContextType>({} as NavigationContextType);
 
-const NavigationProvider = ({ children }: { children: React.ReactNode }) => {
+/**
+ * Provides the NavigationContext to its children.
+ * @param {Object} props - The component's props.
+ * @param {React.ReactNode} props.children - The children of the component.
+ * @returns {JSX.Element} - The rendered component.
+ */
+
+const NavigationProvider = ({
+  children
+}: {
+  children: React.ReactNode;
+}): JSX.Element => {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
 
+  // Updates the current path based on browser history changes.
   useEffect(() => {
     const handler = () => {
       setCurrentPath(window.location.pathname);
@@ -25,7 +36,12 @@ const NavigationProvider = ({ children }: { children: React.ReactNode }) => {
     };
   }, []);
 
-  const navigate = (to: string) => {
+  /**
+   * Navigates to a new path.
+   * @param {string} to - The new path to navigate to.
+   * @returns {void}
+   */
+  const navigate = (to: string): void => {
     window.history.pushState({}, "", to);
     return setCurrentPath(to);
   };
