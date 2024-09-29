@@ -1,6 +1,6 @@
 import React, { createContext, useEffect, useState } from "react";
 
-type NavigationContextType = {
+export type NavigationContextType = {
   currentPath: string;
   navigate: (to: string) => void;
 };
