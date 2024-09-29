@@ -13,7 +13,7 @@
 ## Installation
 
 ```bash
-npm install navi
+npm install @mrivasperez/navi
 ```
 
 ## Usage
