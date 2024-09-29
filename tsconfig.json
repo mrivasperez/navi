@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ES2015",
+    "outDir": "dist", // Specify output directory for compiled code
+    "moduleResolution": "node",
+    "declaration": true, // Generate type definitions
+    "sourceMap": true, // Generate source maps
+    "strict": true, // Enable strict type checking
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": true,
+    "jsx": "react"
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}
