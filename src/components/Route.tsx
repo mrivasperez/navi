@@ -1,5 +1,5 @@
 import React from "react";
-import useNavigation from "../hooks/useNavigation";
+import { useNavigation } from "../hooks/useNavigation";
 
 interface RouteProps {
   path: string;
@@ -21,4 +21,4 @@ const Route = ({ path, children }: RouteProps): React.ReactNode => {
   return null;
 };
 
-export default Route;
+export { Route };

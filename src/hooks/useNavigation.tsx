@@ -12,4 +12,4 @@ const useNavigation = (): NavigationContextModel => {
   return useContext(NavigationContext);
 };
 
-export default useNavigation;
+export { useNavigation };

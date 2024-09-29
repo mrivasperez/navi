@@ -1,5 +1,5 @@
 import React, { PropsWithChildren } from "react";
-import useNavigation from "../hooks/useNavigation";
+import { useNavigation } from "../hooks/useNavigation";
 
 interface LinkProps extends React.HTMLAttributes<HTMLAnchorElement> {
   to: string;
@@ -41,4 +41,4 @@ const Link = ({
   );
 };
 
-export default Link;
+export { Link };
